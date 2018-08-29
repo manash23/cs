@@ -392,7 +392,38 @@ box-sizing: border-box;
 
 	
 
-@media screen and (max-width:716px){
+@media screen and (max-width:980px){
+	.logo {
+		font-size: 4vw;
+	}
+	.menu ul li a{
+		font-size: 3vw;
+	}
+	.hero-text p{
+		font-size: 3vw;
+	}
+	.hero-text a{
+		font-size: 3vw;
+	}
+	.resizeimage {
+		width: 80vw;
+		height: 60vw;
+	}
+	footer h2,h3 {
+		font-size: 4vw;
+	}
+	.footer-box1 a{
+		font-size: 3vw;
+	}
+	.footer-box3 a{
+		height: 3vw;
+		width: 3vw;
+	}
+	.contact-items input[type="text"]{
+		height: 4vh;
+		width: 40%;
+
+	}
 	.top-bar{
 		flex-direction: column;
 		text-align: center;
@@ -423,20 +454,8 @@ box-sizing: border-box;
 	.main-content{
 		flex-direction: column;
 	}
-	.contact-items textarea{
-	border-radius: 1vw;
-	height: 10vh;
-	padding: 1.2vw;
-	width:55%;
-	margin-bottom: 5vw;
+	
 
-}
-	#contact{
-	background: url(../images/klore.jpg) no-repeat;
-	padding: 5vw 0;
-	background-size: 100% 100%;
-	height: 60vh;
-}
 }
 @media screen and (max-width: 640px){
 	.resizeimage {
