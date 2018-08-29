@@ -1,3 +1,6 @@
+html,body{
+	height: 100%;
+}
 *{margin: 0;
 padding: 0;
 font-family: sans-serif;}
@@ -7,27 +10,29 @@ font-family: sans-serif;}
 }
 h1 {
 	text-align: center;
-	font-size: 5vw;
+	font-size: 4vw;
 	font-family: sans-serif;
-	padding-top: 5vw;
 	color: red;
 }
+
 .top-bar {
 
-	
+	top: 0vh;
 	background-color: black;
 	display: flex;
 	width: 100%;
-	height: auto;
+line-height: 10vh;
 	position: fixed;
+	z-index: 1000;
+
 	
 }
 
 .logo {
 	color: #fff;
 	flex: 1;
-	font-size: 3vw;
-	padding: 2vw;
+	font-size: 2vw;
+	padding: 1vw;
 	
 }
 .menu {
@@ -38,7 +43,7 @@ h1 {
 	
 	display: flex;
 	list-style: none;
-	margin-top: 2.2vw;
+	margin-top: 1vw;
 	flex-flow: row wrap;
 }
 .menu ul li {
@@ -47,7 +52,7 @@ h1 {
 }
 .menu ul li a {
 	color: #fff;
-	font-size: 2.45vw;
+	font-size: 1.5vw;
 	text-decoration: none;
 }
 .menu  ul li a:hover {
@@ -57,47 +62,83 @@ h1 {
 	background-color: grey;
 }
 /*hero */
-.hero {
-	
-	background-image: url(../images/carry.jpg);
-	width: 100%;
-	background-size: 100% 100%;
+/* The hero image */
+.hero-image {
+	margin-top: 10vh;
+	  width:100%;
+    height:100%;
+
+    /* Use "linear-gradient" to add a darken background effect to the image . This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/carry.jpg");
+    /* Set a specific height */
+    display: flex;
+    justify-content: center;
+    /* Position and center the image to scale nicely on all screens */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  
+    position: relative;
 }
+
+/* Place text in the middle of the image */
 .hero-text {
 	display: flex;
-	padding: 15% 0;
-}
-.hero-text-items {
-	color: red;
-	margin: auto;
-	padding-top: 20%;
-	
-	text-align: center;
-	width: 50%;
-} 
-.hero-text-items h1 {
-	font-size: 3.5vw;
-	margin-bottom: 2vw;
-	text-transform: uppercase;
-}
-.hero-text-items p {
-	font-size: 2vw;
-	margin-bottom: 2vw;
-}
-.hero-text-items a {
-	background-color: #000;
-	color: #fff;
-	text-decoration: none;
-	text-transform: uppercase;
+	justify-content: center;
+   flex-direction:column; 
+   align-items:center; 
+   justify-content:space-around;
+    text-align: center;
+    position: relative;
+    align-self:center;
+        color: white;
+    font-size: 1.5vw;
 
 }
+.chutiya{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	margin-bottom: 10%;
+	justify-content: center;
+	flex:0.8;
+}
+.hero-text h1 {
+display: flex;
+text-align: center;
+flex:1;
+}
+.hero-text p {
+display: flex;
+flex:0.5;
+}
+.hero-text a{
+	display: flex;
+	flex:0.3;
+	color: white;
+	text-align: center;
+	background: black;
+	border-color: black;
+	border-radius: 16px;
+	padding:6px;
+	width: 10%;
+	font-size: 2vw;
+	text-decoration: none;
+	box-shadow: 0.5vw 1vh red;
+}
+
+
+
 
 /*column*/
 .main-content {
+
 	
 	display: flex;
 	flex-flow: row wrap;
 	padding: 5% 0;
+	justify-content: flex-start;
+	box-sizing: border-box;
 } 
 .main1{
 	
@@ -105,15 +146,20 @@ h1 {
 	padding: 3%;
 	text-align: center;
 	align-items: center;
+	box-sizing: border-box;
+}
+.main1 p {
+	text-align: left;
+
 }
 /*.main1 p {
 	font-family: 'Dancing Script', cursive;
 	font-size: 2.5vw;
 }*/
 .alll p{
-	font-family: 'Dancing Script', cursive;
+	
 	font-size: 2.5vw;
-	text-align: center;
+	
 
 }
 .alll a{
@@ -125,6 +171,10 @@ h1 {
 	margin-bottom: 2.5vw;
 	font-size: 2.5vw;
 }
+/*.main1 img {
+	width: 100%;
+
+}*/
 /*register*/
 .contact-items {
 	display: flex;
@@ -132,42 +182,53 @@ h1 {
 	flex-direction: column;
 }
 #contact{
-	background: url(../images/klore.jpg) no-repeat;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/klore.jpg");
 	padding: 5vw 0;
 	background-size: 100% 100%;
+	justify-content: center;
+	align-items: center;
 	
 }
 .contact-items h2 {
-	padding-top: 5vh;
+	padding-top: 4vh;
 	color: #fff;
 	font-size: 5vw;
-	margin-bottom: 8vh;
+	margin-bottom: 5vh;
 }
 .contact-items input[type="text"]{
 	border-radius: 2vw;
 	margin-bottom: 1vh;
-	padding: 1.5vw;
-	width: 55%;
+	padding: 1vw;
+	width: 45%;
 }
 .contact-items textarea{
 	border-radius: 1vw;
-	height: 10vh;
-	padding: 1.2vw;
+	height: 9vh;
 	width:55%;
-	margin-bottom: 3vw;
+	margin-bottom: 2vw;
 
 }
 .contact-items h2{
 	color: red;
 }
 .contact-items a{
+	padding: 2vh;
+	height:50%;
 	text-decoration: none;
-	font-size: 2vw;
+	font-size: 3vw;
 	color: #fff;
+	border-radius: 30px;
 	background-color: #000;
+	box-shadow: 0.5vw 1vh red;
+}
+#padcontents{
+	padding-top: 1vh;
+}
+.resizeimage {
+	width: 24vw;
 }
 /*footer*/
-.low-bar {
+/*.low-bar {
 bottom: 0;
 background-color: #000;
 width: 100%;
@@ -190,7 +251,7 @@ width: 100%;
 	flex: 1;
 	text-align: center;
 }
-.links li a img {
+/*.links li a img {
 	
 	width: 3.5vw;
 	height: 3.5vw;
@@ -241,7 +302,97 @@ width: 100%;
 	height: 60vh;
 }
 }*/
-@media screen and (max-width: 400px){
+#left {
+	text-align: left;
+}
+.footer{
+	display: flex;
+	background-color: black;
+	width: 100%;
+}
+.footer-box1{
+	flex: 3;
+	color: #808080;
+	padding: 10px;
+	box-sizing: border-box;
+	align-items: center;
+	text-align: center;
+	border-right: 2px solid rgba(105,105,105,0.2);
+}
+.footer-box1 a{
+	color: #a2a2a2;
+	text-decoration: none;
+	text-align: center;
+	}
+
+.footer-box2{
+	flex: 3;
+	color: #808080;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	border-right: 2px solid rgba(105,105,105,0.2);
+}
+.footer-box2 h4{
+	color: #efefef;
+	text-align: left;
+}
+
+.footer-box2 p{
+	color: #efefef;
+	text-align: left;
+}
+
+.footer-box3{
+	flex: 3;
+	color: #808080;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+}
+.footer-box3 h3 {
+	padding-bottom: 1vw;
+}
+.footer-box3 a {
+	text-decoration: none;
+}
+/*@media screen and (max-width:700px)  {
+	.footer{
+		display: flex;
+		flex-flow: column wrap;
+	}
+	.footer-box1{
+		color: #808080;
+		padding: 10px;
+		box-sizing: border-box;
+		text-align: center;
+		border-bottom: 2px solid rgba(105,105,105,0.2);
+	}
+	.footer-box2{
+		color: #808080;
+		padding: 10px;
+box-sizing: border-box;
+		text-align: center;
+		border-bottom: 2px solid rgba(105,105,105,0.2);
+	}
+	.footer-box2 h4{
+		color: #efefef;
+		text-align: center;
+	}
+
+	.footer-box2 p{
+		color: #efefef;
+		text-align: center;
+	}		
+}*/
+#mid {
+	text-align: center;
+}
+
+
+	
+
+@media screen and (max-width:716px){
 	.top-bar{
 		flex-direction: column;
 		text-align: center;
@@ -250,9 +401,10 @@ width: 100%;
 	}
 
 	
-	.low-bar {
+	footer {
 		flex-direction: column;
 		text-align: center;
+		font-size: 2vw;
 	}
 	.menu ul li{
 		padding: 0.3vw;
@@ -286,4 +438,46 @@ width: 100%;
 	height: 60vh;
 }
 }
+@media screen and (max-width: 640px){
+	.resizeimage {
+		height: 50vw;
+		width: 70vw;
+	}
+
+}
+@media screen and (max-width: 640px){
+	.logo {
+		font-size: 4vw;
+	}
+	.menu ul li a{
+		font-size: 3vw;
+	}
+	.hero-text p{
+		font-size: 3vw;
+	}
+	.hero-text a{
+		font-size: 3vw;
+	}
+	.resizeimage {
+		width: 80vw;
+		height: 60vw;
+	}
+	footer h2,h3 {
+		font-size: 4vw;
+	}
+	.footer-box1 a{
+		font-size: 3vw;
+	}
+	.footer-box3 a{
+		height: 3vw;
+		width: 3vw;
+	}
+	.contact-items input[type="text"]{
+		height: 4vh;
+		width: 40%;
+
+	}
+
+}
+
 	
